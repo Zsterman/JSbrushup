@@ -50,6 +50,34 @@ function helloSir() {
 
 helloSir();
 
+// passing functions into another function 
+
+// initial function 
+
+function printVariable(variable){
+  console.log(variable)
+};
+
+printVariable("test");
+
+// secondary function 
+
+function func(x){
+  x("Hello World Again")
+};
+
+func(printVariable)
+
+// callback function. calling back printVariable
+
+function appendName(y, callback){
+  callback("hello, my name is " + y);
+}
+
+appendName("Zachary",printVariable )
+
+
+
 // arrays + nested arrays
 
 var array1 = [
